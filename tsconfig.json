@@ -12,6 +12,7 @@
     "baseUrl": ".",
     "moduleResolution": "Bundler",
     "types": ["node"],
+    "lib": ["ESNext", "Decorators"],
     "paths": {
       "@/*": ["src/*"]
     },
