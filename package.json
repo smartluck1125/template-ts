@@ -9,8 +9,8 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint --ext .ts --fix --cache ./src",
-    "format": "prettier --write --cache ./src",
+    "lint": "eslint --fix --cache --ext .js,.ts .",
+    "format": "prettier --write --cache \"**/*.{js,ts}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --no-warnings --experimental-specifier-resolution=node --experimental-loader ts-node/esm --watch-path=./src ./src/index.ts",
     "start": "node --no-warnings --experimental-specifier-resolution=node ./dist/index.js",
