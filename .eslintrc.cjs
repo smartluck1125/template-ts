@@ -10,11 +10,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['@typescript-eslint/eslint-plugin', 'prettier'],
+  plugins: ['@typescript-eslint/eslint-plugin'],
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended'
+    'prettier'
   ],
   globals: {
     Atomics: 'readonly',
@@ -22,7 +22,6 @@ module.exports = {
   },
   ignorePatterns: ['dist', 'node_modules'],
   rules: {
-    'prettier/prettier': 'warn',
     'no-unused-vars': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
     'require-atomic-updates': 'off',
