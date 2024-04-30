@@ -3,7 +3,13 @@ module.exports = {
   env: {
     node: true,
     es6: true,
-    es2021: true
+    es2016: true,
+    es2017: true,
+    es2018: true,
+    es2019: true,
+    es2020: true,
+    es2021: true,
+    es2022: true
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -16,7 +22,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
   },
-  ignorePatterns: ['dist/*', 'config/*', 'data/*'],
+  ignorePatterns: ['dist'],
   rules: {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
