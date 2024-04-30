@@ -2,6 +2,7 @@
   "name": "ts-esm-template",
   "version": "1.0.0",
   "description": "a template for node.js using typescript and esm",
+  "private": true,
   "type": "module",
   "main": "dist/index.js",
   "scripts": {
