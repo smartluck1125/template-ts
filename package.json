@@ -18,7 +18,13 @@
     "postinstall": "simple-git-hooks"
   },
   "simple-git-hooks": {
-    "pre-commit": "npm run format && npm run lint"
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js?(x),json,.ts?(x)}": [
+      "npm run lint",
+      "npm run format"
+    ]
   },
   "author": "hhui64",
   "license": "MIT",
@@ -29,6 +35,7 @@
     "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
+    "lint-staged": "^15.1.0",
     "prettier": "^3.1.0",
     "simple-git-hooks": "^2.9.0",
     "ts-node": "^10.9.1",
