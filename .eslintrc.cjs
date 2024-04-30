@@ -11,7 +11,11 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['@typescript-eslint/eslint-plugin', 'prettier'],
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended'
+  ],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -22,6 +26,6 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'off',
     'require-atomic-updates': 'off',
     'no-async-promise-executor': 'off',
-    'prettier/prettier': ['error', { endOfLine: 'auto' }]
+    'prettier/prettier': 'warn'
   }
 }
