@@ -3,21 +3,15 @@ module.exports = {
   env: {
     node: true,
     es6: true,
-    es2016: true,
-    es2017: true,
-    es2018: true,
-    es2019: true,
-    es2020: true,
-    es2021: true,
-    es2022: true
+    es2021: true
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['@typescript-eslint/eslint-plugin'],
-  extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+  plugins: ['@typescript-eslint/eslint-plugin', 'prettier'],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'

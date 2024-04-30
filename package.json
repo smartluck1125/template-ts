@@ -9,22 +9,28 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint ./src --ext .ts --fix",
+    "lint": "eslint --ext .ts --fix --cache ./src",
+    "format": "prettier --write --cache ./src",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --no-warnings --experimental-specifier-resolution=node --experimental-loader ts-node/esm --watch-path=./src ./src/index.ts",
     "start": "node --no-warnings --experimental-specifier-resolution=node ./dist/index.js",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "postinstall": "simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npm run format && npm run lint"
   },
   "author": "hhui64",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.8.4",
-    "@typescript-eslint/eslint-plugin": "^6.7.5",
-    "@typescript-eslint/parser": "^6.7.5",
-    "eslint": "^8.51.0",
+    "@types/node": "^20.8.7",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.52.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.1",
     "prettier": "^3.0.3",
+    "simple-git-hooks": "^2.9.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.2.2"
