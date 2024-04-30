@@ -3,6 +3,7 @@
     "strict": true,
     "target": "ESNext",
     "module": "ESNext",
+    "noEmit": true,
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
