@@ -9,7 +9,7 @@
     "rootDir": "src",
     "strict": true,
     "moduleResolution": "bundler",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     },
@@ -19,6 +19,9 @@
     "experimentalDecorators": true
   },
   "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
     "transpileOnly": true,
     "files": true
   },
