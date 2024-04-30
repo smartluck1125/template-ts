@@ -1,3 +1,3 @@
-import { message } from './modules/helloworld'
+import helloWorld from './modules/helloWorld'
 
-console.log(message())
+console.log(helloWorld('typescript!'))
