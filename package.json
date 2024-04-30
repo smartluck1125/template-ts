@@ -9,11 +9,11 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "lint": "eslint --fix --cache --ext .js,.ts .",
-    "format": "prettier --write --cache \"**/*.{js,ts}\"",
+    "lint": "eslint --fix --cache .",
+    "format": "prettier --write --cache .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --no-warnings --experimental-loader=ts-node/esm --watch-path=./src ./src/index.ts",
-    "start": "node --no-warnings ./dist/index.js",
+    "start": "node ./dist/index.js",
     "build": "tsc -p tsconfig.json",
     "postinstall": "simple-git-hooks"
   },
@@ -22,8 +22,8 @@
   },
   "lint-staged": {
     "*.{js?(x),json,.ts?(x)}": [
-      "npm run lint",
-      "npm run format"
+      "eslint --fix --ext .js,.jsx,.ts,.tsx,.json .",
+      "prettier --write \"**/*.{js?(x),.ts?(x),json}\""
     ]
   },
   "author": "hhui64",
