@@ -14,11 +14,8 @@ A template for node.js using typescript and esm
 
 ```bash
 npx degit hhui64/template-ts my-project
+cd my-project
+
 npm install
-```
-
-### Start
-
-```bash
 npm run dev
 ```
