@@ -22,10 +22,10 @@ module.exports = {
   },
   ignorePatterns: ['dist'],
   rules: {
-    'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+    'prettier/prettier': 'warn',
+    'no-unused-vars': 'warn',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'require-atomic-updates': 'off',
-    'no-async-promise-executor': 'off',
-    'prettier/prettier': 'warn'
+    'no-async-promise-executor': 'off'
   }
 }
