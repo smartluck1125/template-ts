@@ -1,5 +1,3 @@
-const helloWorld = (str: string) => {
+export default function helloWorld(str: string) {
   return 'hello world! ' + str
 }
-
-export default helloWorld
