@@ -1,6 +1,6 @@
 # TypeScript with ES Module
 
-A template for node.js using typescript and esm
+A Template for Node.js using TypeScript and ES Module.
 
 ## Features
 
