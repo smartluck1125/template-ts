@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run",
+      "type": "node",
+      "request": "launch",
+      "internalConsoleOptions": "openOnSessionStart",
+      "cwd": "${workspaceFolder}",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "runtimeArgs": [
+        "--no-warnings",
+        "--nolazy",
+        "--experimental-loader=ts-node/esm",
+        "--watch-path=${workspaceFolder}/src"
+      ],
+      "args": ["${workspaceFolder}/src/index.ts"],
+      "env": {
+        "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json"
+      }
+    },
+    {
+      "name": "Run current file",
+      "type": "node",
+      "request": "launch",
+      "internalConsoleOptions": "openOnSessionStart",
+      "cwd": "${workspaceFolder}",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"],
+      "runtimeArgs": [
+        "--no-warnings",
+        "--nolazy",
+        "--experimental-loader=ts-node/esm",
+        "--watch"
+      ],
+      "args": ["${relativeFile}"],
+      "env": {
+        "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json"
+      }
+    }
+  ]
+}
