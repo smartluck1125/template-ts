@@ -20,7 +20,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
   },
-  ignorePatterns: ['dist'],
+  ignorePatterns: ['dist', 'node_modules'],
   rules: {
     'prettier/prettier': 'warn',
     'no-unused-vars': 'warn',
