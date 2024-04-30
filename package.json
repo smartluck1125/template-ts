@@ -4,6 +4,9 @@
   "description": "A template for node.js using typescript and esm",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=18.11.0"
+  },
   "main": "dist/index.js",
   "scripts": {
     "lint": "eslint ./src --ext .ts --fix",
