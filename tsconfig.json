@@ -11,7 +11,7 @@
     "moduleResolution": "bundler",
     "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     },
     "esModuleInterop": true,
     "resolveJsonModule": true,
