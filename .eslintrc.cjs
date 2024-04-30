@@ -5,10 +5,9 @@ module.exports = {
     es6: true,
     es2021: true
   },
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly'
   },
   plugins: ['@typescript-eslint/eslint-plugin'],
   extends: [
@@ -16,11 +15,12 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier'
   ],
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module'
   },
-  ignorePatterns: ['dist', 'node_modules'],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
   rules: {
     'no-unused-vars': 'warn',
     '@typescript-eslint/no-unused-vars': 'warn',
