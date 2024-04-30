@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "strict": true,
     "target": "ESNext",
     "module": "ESNext",
     "declaration": true,
@@ -7,9 +8,9 @@
     "sourceMap": true,
     "outDir": "dist",
     "rootDir": "src",
-    "strict": true,
-    "moduleResolution": "bundler",
     "baseUrl": ".",
+    "moduleResolution": "bundler",
+    "types": ["node"],
     "paths": {
       "@/*": ["src/*"]
     },
@@ -26,5 +27,5 @@
     "experimentalSpecifierResolution": "node",
     "files": true
   },
-  "exclude": ["./node_modules", "./dist"]
+  "exclude": ["node_modules", "dist"]
 }
