@@ -1,0 +1,18 @@
+{
+  "extends": ["./tsconfig.json"],
+  "compilerOptions": {
+    "rootDir": "src",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/rollup.config.ts",
+    "**/__tests__",
+    "**/*.test.ts",
+    "**/vitest.config.ts",
+    "**/scripts"
+  ]
+}

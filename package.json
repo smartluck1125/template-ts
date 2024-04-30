@@ -14,7 +14,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --no-warnings --experimental-loader=ts-node/esm --watch-path=./src ./src/index.ts",
     "start": "node ./dist/index.js",
-    "build": "tsc && exit 0",
+    "build:dev": "rollup -c --configPlugin typescript --environment BUILD:development",
+    "build": "rollup -c --configPlugin typescript --environment BUILD:production",
     "postinstall": "node ./scripts/postinstall.js"
   },
   "simple-git-hooks": {
@@ -31,7 +32,12 @@
   },
   "author": "hhui64",
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
     "@swc/core": "^1.4.8",
     "@swc/helpers": "^0.5.6",
     "@types/node": "^20.11.28",
@@ -40,6 +46,9 @@
     "execa": "^8.0.1",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
+    "rollup": "^4.13.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-typescript2": "^0.36.0",
     "simple-git-hooks": "^2.10.0",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
