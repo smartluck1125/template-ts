@@ -21,9 +21,12 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.{js?(x),json,.ts?(x)}": [
-      "eslint --fix --ext .js,.jsx,.ts,.tsx,.json .",
-      "prettier --write \"**/*.{js?(x),.ts?(x),json}\""
+    "*.{js?(x),json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "eslint",
+      "prettier --parser=typescript --write"
     ]
   },
   "author": "hhui64",
