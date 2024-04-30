@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist/",
+    "rootDir": "./src/",
+    "strict": true,
+    "moduleResolution": "bundler",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "src/*": ["src/*"]
+    },
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true
+  },
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true
+    // Tell ts-node CLI to install the --loader automatically, explained below
+    // "esm": true,
+    // "compilerOptions": {
+    //   "module": "commonjs",
+    //   "moduleResolution": "Node",
+    // }
+  },
+  "exclude": ["./node_modules", "./dist"]
+}
